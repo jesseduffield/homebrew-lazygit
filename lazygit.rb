@@ -2,9 +2,9 @@
 class Lazygit < Formula
   desc "A simple terminal UI for git commands, written in Go"
   homepage "https://github.com/jesseduffield/lazygit/"
-  url "https://github.com/jesseduffield/lazygit/releases/download/v0.7/lazygit_0.7_Darwin_x86_64.tar.gz"
-  version "0.7"
-  sha256 "9a29aef352e59561eba2b7e811bb603692792d7e8ccfc1af4fdda83ef6481aba"
+  url "https://github.com/jesseduffield/lazygit/releases/download/v0.7.1/lazygit_0.7.1_Darwin_x86_64.tar.gz"
+  version "0.7.1"
+  sha256 "9c5338292b9de6c8cd8f4fbe94884c35262cb53cb2048e86dc3dd162e43b6eeb"
 
   def install
     bin.install "lazygit"
