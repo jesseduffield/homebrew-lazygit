@@ -2,14 +2,26 @@
 class Lazygit < Formula
   desc "A simple terminal UI for git commands, written in Go"
   homepage "https://github.com/jesseduffield/lazygit/"
-  version "0.8.1"
+  version "0.8.2"
+  bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.8.1/lazygit_0.8.1_Darwin_x86_64.tar.gz"
-    sha256 "f3a91b6243930c0ba6ab40d0e99f4b987cc3e443f4f66621186c5385075b7eb1"
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.8.2/lazygit_0.8.2_Darwin_x86_64.tar.gz"
+    sha256 "4e6c0a7316c01dcf5a72ab8b1bad7f4fd7a25bdeae862185530bd02e722a9c11"
   elsif OS.linux?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.8.1/lazygit_0.8.1_Linux_x86_64.tar.gz"
-    sha256 "7405f8b1eb6c04164d097c346af188993786e210d076a5ac727718c04fc3e41b"
+    if Hardware::CPU.intel?
+      url "https://github.com/jesseduffield/lazygit/releases/download/v0.8.2/lazygit_0.8.2_Linux_x86_64.tar.gz"
+      sha256 "81465df5b278e07c82979e4b504f5717d496baea1f7b1973ef52483450bfbac7"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/jesseduffield/lazygit/releases/download/v0.8.2/lazygit_0.8.2_Linux_arm64.tar.gz"
+        sha256 "b868859ae005ffb6f1b85c950d6f6618c8e3074d8ede3f1e7b697962f925ee9a"
+      else
+        url "https://github.com/jesseduffield/lazygit/releases/download/v0.8.2/lazygit_0.8.2_Linux_armv6.tar.gz"
+        sha256 "74ce7f9e9d2472750e75440fd93e61d9deb79cf0a47a45ea88aa08648673ce82"
+      end
+    end
   end
 
   def install
