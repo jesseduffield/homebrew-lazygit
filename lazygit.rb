@@ -2,26 +2,24 @@
 class Lazygit < Formula
   desc "A simple terminal UI for git commands, written in Go"
   homepage "https://github.com/jesseduffield/lazygit/"
-  version "0.23.7"
+  version "0.24"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.23.7/lazygit_0.23.7_Darwin_x86_64.tar.gz"
-    sha256 "8795f4b8b17ee6e479efc7ca636d4b565c0c8946f5553485dbdbd7a67e3729e0"
-  elsif OS.linux?
-    if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazygit/releases/download/v0.23.7/lazygit_0.23.7_Linux_x86_64.tar.gz"
-      sha256 "84528f6c2d29e15d237bddd152d0cd59ddba0119f99413d37445ec39eedfe467"
-    end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/jesseduffield/lazygit/releases/download/v0.23.7/lazygit_0.23.7_Linux_arm64.tar.gz"
-        sha256 "7f4ffcd7f4d2aebb5aa7e9eaa98a1dbdc775ac6b3d5ce6a05442a2cb4be4ddeb"
-      else
-        url "https://github.com/jesseduffield/lazygit/releases/download/v0.23.7/lazygit_0.23.7_Linux_armv6.tar.gz"
-        sha256 "f9b14d65ecbe0592951667524eaedf6ec251b36cd93a8cfe6bbb40680a2e00a4"
-      end
-    end
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.24/lazygit_0.24_Darwin_x86_64.tar.gz"
+    sha256 "477e28ca3aa334a208aa65165287750cb70913b5ddb6baa2f0aaa1bb7b86c7ca"
+  end
+  if OS.linux? && Hardware::CPU.intel?
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.24/lazygit_0.24_Linux_x86_64.tar.gz"
+    sha256 "09a13943d5f9722f07e0855216a4612969dcdae2583d64857345296d3c7e3c89"
+  end
+  if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.24/lazygit_0.24_Linux_armv6.tar.gz"
+    sha256 "58d39d3149b862d90821b333caa4c1559348dd9ce0abe949e36df1f0c0683002"
+  end
+  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.24/lazygit_0.24_Linux_arm64.tar.gz"
+    sha256 "7a8997a0ed7e0e3031d94a5ee96dcda6b679ae9749b11ecf8a602fc2c7d71c56"
   end
 
   def install
