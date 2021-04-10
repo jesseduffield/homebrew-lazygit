@@ -5,28 +5,28 @@
 class Lazygit < Formula
   desc "A simple terminal UI for git commands, written in Go"
   homepage "https://github.com/jesseduffield/lazygit/"
-  version "0.27.2"
+  version "0.27.3"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.2/lazygit_0.27.2_Darwin_x86_64.tar.gz"
-    sha256 "2f443ebd0f411a606c9208190effa8c3cf0f85f6a44c3a136acfe61f8deffbf4"
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.3/lazygit_0.27.3_Darwin_x86_64.tar.gz"
+    sha256 "1d171831f39d81da5d7ac863fea55a043af76e9e6340f2fba5e2c310bc65817f"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.2/lazygit_0.27.2_Darwin_arm64.tar.gz"
-    sha256 "768a639ebbb065e7f92a02c591f92bd9a66bb786f03c9c3279e17346f085d1fb"
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.3/lazygit_0.27.3_Darwin_arm64.tar.gz"
+    sha256 "be6281f83407ad14aa9ff36bb1381ab27647b50807253811ea29f2db64e98e31"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.2/lazygit_0.27.2_Linux_x86_64.tar.gz"
-    sha256 "5a8dbaa039bac07776feeca2f2844632b7638760cb002cb0082b56b04cfab875"
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.3/lazygit_0.27.3_Linux_x86_64.tar.gz"
+    sha256 "735d7d6dca0393c6950090c390bd17bc23f863484cb6c6454328e8a055e14b7a"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.2/lazygit_0.27.2_Linux_armv6.tar.gz"
-    sha256 "d4d3ae6a1192ed1205000548569001fb0bf036f801a17fbf04be8c35f2d3baa8"
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.3/lazygit_0.27.3_Linux_armv6.tar.gz"
+    sha256 "af81c501d7f1df5242f4dcc0ddaee8f1b876e62a3461a2ad894223d4d1eaf924"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.2/lazygit_0.27.2_Linux_arm64.tar.gz"
-    sha256 "26ffa9855973050dba27a64828f9fdbac41dfcc6e49b9d340a32e2d880e7ac2a"
+    url "https://github.com/jesseduffield/lazygit/releases/download/v0.27.3/lazygit_0.27.3_Linux_arm64.tar.gz"
+    sha256 "58c3d89f739f0f8806d05f02eee44cafc73c6e6d98427379a78807c159ed16a1"
   end
 
   def install
