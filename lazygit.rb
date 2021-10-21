@@ -6,7 +6,6 @@ class Lazygit < Formula
   desc "A simple terminal UI for git commands, written in Go"
   homepage "https://github.com/jesseduffield/lazygit/"
   version "0.29"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
