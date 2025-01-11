@@ -5,20 +5,20 @@
 class Lazygit < Formula
   desc "A simple terminal UI for git commands, written in Go"
   homepage "https://github.com/jesseduffield/lazygit/"
-  version "0.44.1"
+  version "0.45.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/jesseduffield/lazygit/releases/download/v0.44.1/lazygit_0.44.1_Darwin_arm64.tar.gz"
-      sha256 "238deff5091435a615e6bad7dd3ca84e4bcd1eb143b724f860da56a72b460443"
+      url "https://github.com/jesseduffield/lazygit/releases/download/v0.45.0/lazygit_0.45.0_Darwin_arm64.tar.gz"
+      sha256 "e3863a61133401bd45ca2e713abaddbb468b7a77d51394ec9ce1fd7c116e9a85"
 
       def install
         bin.install "lazygit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazygit/releases/download/v0.44.1/lazygit_0.44.1_Darwin_x86_64.tar.gz"
-      sha256 "39b0fc9250a39d9a8ba7cfa1df0a700e56e20619bcb2af213210c4e9fb949c5d"
+      url "https://github.com/jesseduffield/lazygit/releases/download/v0.45.0/lazygit_0.45.0_Darwin_x86_64.tar.gz"
+      sha256 "1eca7636235901ca900484de75e047c8aa8228db41b9995162e7f19d54a78a1c"
 
       def install
         bin.install "lazygit"
@@ -28,24 +28,24 @@ class Lazygit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/jesseduffield/lazygit/releases/download/v0.44.1/lazygit_0.44.1_Linux_armv6.tar.gz"
-      sha256 "905da09386b4b6092b3cb0e4a178b361e99f21f4fcf2f9f9a8fa563ac8189a62"
-
-      def install
-        bin.install "lazygit"
-      end
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/jesseduffield/lazygit/releases/download/v0.44.1/lazygit_0.44.1_Linux_x86_64.tar.gz"
-      sha256 "84682f4ad5a449d0a3ffbc8332200fe8651aee9dd91dcd8d87197ba6c2450dbc"
+      url "https://github.com/jesseduffield/lazygit/releases/download/v0.45.0/lazygit_0.45.0_Linux_armv6.tar.gz"
+      sha256 "66f62adc382f8e4e6327c458fc6bccf17950d3c79def5a4a8932cffd71ea5ae6"
 
       def install
         bin.install "lazygit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jesseduffield/lazygit/releases/download/v0.44.1/lazygit_0.44.1_Linux_arm64.tar.gz"
-      sha256 "26a435f47b691325c086dad2f84daa6556df5af8efc52b6ed624fa657605c976"
+      url "https://github.com/jesseduffield/lazygit/releases/download/v0.45.0/lazygit_0.45.0_Linux_arm64.tar.gz"
+      sha256 "1b87437a31ab57828b4b1dad708dd9eb4121d4d7cf351a715f3cc05f29457a82"
+
+      def install
+        bin.install "lazygit"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jesseduffield/lazygit/releases/download/v0.45.0/lazygit_0.45.0_Linux_x86_64.tar.gz"
+      sha256 "da9a4e97e4343bcb94962d6cc5b98e0fbf4ada8aa621bbc7588c78ba6ccc4879"
 
       def install
         bin.install "lazygit"
